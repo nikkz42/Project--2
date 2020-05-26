@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            style="@style/AppTheme"
+            android:inputType="text"
+            android:id="@+id/input"
+            android:hint="@string/name"
+            />
+
+        <TextView
+            style="@style/AppTheme"
+            android:text="TOPPINGS" />
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Whipped Cream" />
+
+        <CheckBox
+            android:id="@+id/choco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chocolate" />
+
+        <TextView
+            style="@style/AppTheme"
+            android:text="Quantity"
+             />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toLeftOf="@+id/Quantity_view"
+                android:onClick="Increment"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/Quantity_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="0" />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@+id/Quantity_view"
+                android:onClick="Decrement"
+                android:text="-" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="PLACE ORDER"
+            android:id="@+id/place"
+            android:onClick="submitOrder"
+            />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+
+
